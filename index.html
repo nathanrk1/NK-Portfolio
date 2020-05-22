@@ -1,1 +1,60 @@
-<h1>Hello There</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Nathan Kanter: Data Visualization Portfolio</title>
+<style>
+
+#menu{
+    position: fixed;
+}
+#topbar{
+    position: fixed;
+    top:0; 
+    left:0; 
+    height:8%;
+    width:100%;
+}
+
+#bartext{
+    font-family:"Lucida Sans Unicode";
+    stroke: none;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+#page{
+    height:1600px;
+    width:100%;
+    background-color:#cc00cc;
+}
+#content{
+    height:100%;
+    width:100%;
+}
+</style>
+    
+</head>
+<body>
+
+    <div id="menu">
+        <svg id = "topbar" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="100%" height="100%" fill="#ee8806"/>
+            <rect x="0" y="99%" width="100%" height="100%" fill="black" stroke="black"/>
+            <image href="images\Personal Logo_Signature.png" x="0%" y="12.5%" width="6%" height="75%"/>
+            <text id="bartext" x=50% y=50% width=100% height=100%>HOME</text>
+
+        </svg>
+    </div>
+    <div id="page">
+        <svg id = "content" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0%" y="0%" width="100%" height="100%" fill="#cc00cc"/>
+            <image href="images\nathan_profile.png" x="-11% " y="4%" width="50%" height="35%"/>
+        </svg>
+    </div>
+<script>
+
+</script>
+
+</body>
+</html>
