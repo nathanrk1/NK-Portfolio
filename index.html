@@ -70,19 +70,77 @@ body{
             <image href="images\academic.jpg"  x="31.75%" y="57%" width="33.9%" height="40%"/>"
             <image href="images\3D_phone.jpeg" x="66.1%" y="10%" width="33.9%" height="45%" fill="red"/>
             <image href="images\resume.jpg" x="66.1%" y="57%" width="33.9%" height="41%" fill="green"/>
-            <g id="menu">
+            <g class="menu">
                 <rect id = "navbar" x="0" y="0" width="100%" height="10%" fill="url(#Gradient1)"/>
-                <text id="bartext" x=10% y=6% width=100% height=100%>About Me</text>"
+                <!-- <text id="bartext" x=10% y=6% width=100% height=100%>About Me</text>"
                 <text id="bartext" x=20% y=6% width=100% height=100%>Data Visualizations</text>"
                 <text id="bartext" x=36.25% y=6% width=100% height=100%>Modeling</text>"
                 <text id="bartext" x=45.5% y=6% width=100% height=100%>Publications</text>"
-                <text id="bartext" x=56.5% y=6% width=100% height=100%>Resume</text>"
+                <text id="bartext" x=56.5% y=6% width=100% height=100%>Resume</text>" -->
                 <rect id= "navbar_bord" x="0" y="9%" width="100%" height=".5%"/>
-                <image href="images\Personal Logo_Signature.png" x="0%" y="-7.5%" width="6%" height="25%"/>
+                <image id="logo" href="images\Personal Logo_Signature.png" x="47%" y="-7.5%" width="6%" height="25%"/>
             </g>
         </svg>
     </div>
 <script>
+    
+    function SVG(tag) {
+        return document.createElementNS('http://www.w3.org/2000/svg', tag);
+    }
+    function tag(tag) {
+        return document.createElement(tag);
+    }
+    
+   
+    var bbox =$("#logo")[0].getBoundingClientRect();
+    
+         svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',bbox.x-150)
+                  .attr('y',"6%")
+                  .text("Modeling");
+                  $(".menu").append(svgText);
+
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',bbox.x-405)
+                  .attr('y',"6%")
+                  .text("Data Visualizations");
+                  $(".menu").append(svgText);
+                  
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',bbox.x-405-162)
+                  .attr('y',"6%")
+                  .text("About Me");
+                  $(".menu").append(svgText);
+
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',bbox.x + 108)
+                  .attr('y',"6%")
+                  .text("Publications");
+                  $(".menu").append(svgText);
+        
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',bbox.x + 292 )
+                  .attr('y',"6%")
+                  .text("Resume");
+                  $(".menu").append(svgText);
+
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',bbox.x + 432)
+                  .attr('y',"6%")
+                  .text("Contact Me");
+                  $(".menu").append(svgText);
 
 </script>
 
