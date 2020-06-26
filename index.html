@@ -5,51 +5,81 @@
 <title>Nathan Kanter: Data Visualization Portfolio</title>
 <style>
 
-#menu{
-    position: fixed;
-}
-#topbar{
-    position: fixed;
-    top:0; 
-    left:0; 
-    height:8%;
-    width:100%;
-}
-
-#bartext{
-    font-family:"Lucida Sans Unicode";
-    stroke: none;
-    font-weight: bold;
-    font-size: 16pt;
-}
-
-#page{
-    height:1600px;
-    width:100%;
-    background-color:#cc00cc;
+body{
+    margin: 0;
 }
 #content{
-    height:100%;
-    width:100%;
+    top:0; 
+    left:0; 
+    height:768px;
+    width:100%;  
 }
+
+
+#bartext{
+    font-family: candara;
+    font-weight: 300;
+    font-size: 20pt;
+    fill: white;
+}
+
+#bartext:hover{
+   fill:rgb(141, 96, 224);
+   font-weight:bold ;
+}
+
+#navbar{
+    
+      fill: url(#Gradient1); }
+        .stop1 { stop-color: rgba(0, 0, 0, 1); }
+        .stop2 { stop-color: rgba(0, 0, 0, .9); stop-opacity:1;}
+        .stop3 { stop-color: rgba(0, 0, 0, 1); }
+         
+
+#navbar_bord{
+    stroke: rgba(0, 0, 0, .7);
+    stroke-width: 7px;
+}
+
+
 </style>
     
 </head>
 <body>
 
     <div id="menu">
-        <svg id = "topbar" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="100%" height="100%" fill="#ee8806"/>
-            <rect x="0" y="99%" width="100%" height="100%" fill="black" stroke="black"/>
-            <image href="images\Personal Logo_Signature.png" x="0%" y="12.5%" width="6%" height="75%"/>
-            <text id="bartext" x=50% y=50% width=100% height=100%>HOME</text>
-
-        </svg>
-    </div>
-    <div id="page">
         <svg id = "content" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0%" y="0%" width="100%" height="100%" fill="#cc00cc"/>
-            <image href="images\nathan_profile.png" x="-11% " y="4%" width="50%" height="35%"/>
+            <defs>
+                <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+                  <stop class="stop1" offset="0%"/>
+                  <stop class="stop2" offset="50%"/>
+                  <stop class="stop3" offset="100%"/>
+                </linearGradient>
+                <defs>
+                    <radialGradient id="Gradient2"
+                          cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+                      <stop offset="0%" stop-color="rgba(163, 8, 21, .7)"/>
+                      <stop offset="100%" stop-color="rgba(199, 26, 49,1)"/>
+                    </radialGradient>
+                </defs>
+            </defs> 
+                
+            <rect id="background" x="0%" y="8%" width="100%" height="100%" fill="url(#Gradient2)"/>
+            <image href="images\nathan_profile.png"  x=".7%" y="11.3%" />
+            <image href="images\data_center.jpg" x="30%" y="11.3%" width="33.9%" height="43.5%" fill="black"/>
+            <image href="images\academic.jpg"  x="31.75%" y="57%" width="33.9%" height="40%"/>"
+            <image href="images\3D_phone.jpeg" x="66.1%" y="10%" width="33.9%" height="45%" fill="red"/>
+            <image href="images\resume.jpg" x="66.1%" y="57%" width="33.9%" height="41%" fill="green"/>
+            <g id="menu">
+                <rect id = "navbar" x="0" y="0" width="100%" height="10%" fill="url(#Gradient1)"/>
+                <text id="bartext" x=10% y=6% width=100% height=100%>About Me</text>"
+                <text id="bartext" x=20% y=6% width=100% height=100%>Data Visualizations</text>"
+                <text id="bartext" x=36.25% y=6% width=100% height=100%>Modeling</text>"
+                <text id="bartext" x=45.5% y=6% width=100% height=100%>Publications</text>"
+                <text id="bartext" x=56.5% y=6% width=100% height=100%>Resume</text>"
+                <rect id= "navbar_bord" x="0" y="9%" width="100%" height=".5%"/>
+                <image href="images\Personal Logo_Signature.png" x="0%" y="-7.5%" width="6%" height="25%"/>
+            </g>
         </svg>
     </div>
 <script>
