@@ -41,7 +41,44 @@ body{
     stroke-width: 7px;
 }
 
+.select_box {
+  opacity: 1;
+  display: block;
+  transition: 1s ease;
+  backface-visibility: hidden;
+}
 
+.select_box:hover {
+    opacity: 0.5;
+    filter:url(#f1);
+}
+
+#about_me:hover .titletext {
+  visibility: visible;
+  opacity: 1;}
+
+#resume:hover .titletext {
+  visibility: visible;
+  opacity: 1;}
+
+#academic:hover .titletext {
+  visibility: visible;
+  opacity: 1;}
+
+#data_center:hover .titletext {
+  visibility: visible;
+  opacity: 1;}
+
+.titletext{
+    font-size: 35pt;
+    font-weight: bold;
+    fill: white;
+}
+
+#modeling:hover .titletext {
+  transition: 1s ease;
+  visibility: visible;
+  opacity: 1;}
 </style>
     
 </head>
@@ -61,22 +98,37 @@ body{
                       <stop offset="0%" stop-color="rgba(163, 8, 21, .7)"/>
                       <stop offset="100%" stop-color="rgba(199, 26, 49,1)"/>
                     </radialGradient>
+
+                    <filter id="f1" x="0" y="0">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                    </filter>
                 </defs>
             </defs> 
-                
+           
             <rect id="background" x="0%" y="8%" width="100%" height="100%" fill="url(#Gradient2)"/>
-            <image href="images\nathan_profile.png"  x=".7%" y="11.3%" />
-            <image href="images\data_center.jpg" x="30%" y="11.3%" width="33.9%" height="43.5%" fill="black"/>
-            <image href="images\academic.jpg"  x="31.75%" y="57%" width="33.9%" height="40%"/>"
-            <image href="images\3D_Phone.jpeg" x="66.1%" y="10%" width="33.9%" height="45%" fill="red"/>
-            <image href="images\resume.jpg" x="66.1%" y="57%" width="33.9%" height="41%" fill="green"/>
+            <rect x=".2%" y="10.5%" width= "459px" height="683px" fill="black" />
+            <g id = "about_me">
+            <image class = "select_box" href="images\nathan_profile.png"  x=".6%" y="11.3%" />
+            <rect x="32.15%" y="12.2%" width="487px" height="327px" fill="black" />
+            </g>
+            <g id = "resume">
+            <image class = "select_box" href="images\resume.png" x="31.85%" y="13%" width="33.9%" height="41%" />
+            <rect x="32.15%" y="55.7%" width="487px" height="327px" fill="black" />
+            </g>
+            <g id = "academic">
+            <image class = "select_box" href="images\academic.png"  x="31.85%" y="56.5%" width="33.9%" height="41%"/>"
+            <rect x="65.8%" y="12.2%" width="487px" height="327px" fill="black" />
+            </g>
+            <g id = "data_center">
+            <image class = "select_box" href="images\data_center.png" x="65.5%" y="13%" width="33.9%" height="41%" />
+            <rect x="65.8%" y="55.7%" width="487px" height="327px" fill="black" />
+            </g>
+            <g id="modeling">
+            <image class = "select_box" href="images\3D_Phone.png" x="65.5%" y="56.5%" width="33.9%" height="41%" />
+            </g>
+
             <g class="menu">
                 <rect id = "navbar" x="0" y="0" width="100%" height="10%" fill="url(#Gradient1)"/>
-                <!-- <text id="bartext" x=10% y=6% width=100% height=100%>About Me</text>"
-                <text id="bartext" x=20% y=6% width=100% height=100%>Data Visualizations</text>"
-                <text id="bartext" x=36.25% y=6% width=100% height=100%>Modeling</text>"
-                <text id="bartext" x=45.5% y=6% width=100% height=100%>Publications</text>"
-                <text id="bartext" x=56.5% y=6% width=100% height=100%>Resume</text>" -->
                 <rect id= "navbar_bord" x="0" y="9%" width="100%" height=".5%"/>
                 <image id="logo" href="images\Personal Logo_Signature.png" x="47%" y="-7.5%" width="6%" height="25%"/>
             </g>
@@ -141,6 +193,51 @@ body{
                   .attr('y',"6%")
                   .text("Contact Me");
                   $(".menu").append(svgText);
+        
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('class','titletext')
+                  .attr('opacity',0)
+                  .attr('x',"9%")
+                  .attr('y',"57%")
+                  .text("About Me");
+                  $("#about_me").append(svgText);
+
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('class','titletext')
+                  .attr('opacity',0)
+                  .attr('x',"629px")
+                  .attr('y',"270px")
+                  .text("Resume");
+                  $("#resume").append(svgText);
+
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('class','titletext')
+                  .attr('opacity',0)
+                  .attr('x',"590px")
+                  .attr('y',"610px")
+                  .text("Publications");
+                  $("#academic").append(svgText);
+                  
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('class','titletext')
+                  .attr('opacity',0)
+                  .attr('x',"1016px")
+                  .attr('y',"270px")
+                  .text("Data Visualizations");
+                  $("#data_center").append(svgText);
+
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('class','titletext')
+                  .attr('opacity',0)
+                  .attr('x',"1106px")
+                  .attr('y',"610px")
+                  .text("Modeling");
+                  $("#modeling").append(svgText);
 
 </script>
 
