@@ -120,17 +120,17 @@ body{
             <rect x="65.8%" y="12.2%" width="487px" height="327px" fill="black" />
             </g>
             <g id = "data_center">
-            <image class = "select_box" href="images\data_center.png" x="65.5%" y="13%" width="33.9%" height="41%" />
+            <image class = "select_box" href="images\visualization2.png" x="65.5%" y="13%" width="33.9%" height="41%" />
             <rect x="65.8%" y="55.7%" width="487px" height="327px" fill="black" />
             </g>
             <g id="modeling">
-            <image class = "select_box" href="images\3D_Phone.png" x="65.5%" y="56.5%" width="33.9%" height="41%" />
+            <image class = "select_box" href="images\Modeling2.png" x="65.5%" y="56.5%" width="33.9%" height="41%" />
             </g>
 
             <g class="menu">
                 <rect id = "navbar" x="0" y="0" width="100%" height="10%" fill="url(#Gradient1)"/>
                 <rect id= "navbar_bord" x="0" y="9%" width="100%" height=".5%"/>
-                <image id="logo" href="images\Personal Logo_Signature.png" x="47%" y="-7.5%" width="6%" height="25%"/>
+                <image id="logo" href="images\Personal Logo.svg" x="1%" y="-6.5%" width="15%" height="25%"/>
             </g>
         </svg>
     </div>
@@ -149,48 +149,48 @@ body{
          svgText = SVG("text");
                   $(svgText)
                   .attr('id','bartext')
-                  .attr('x',bbox.x-150)
-                  .attr('y',"6%")
-                  .text("Modeling");
-                  $(".menu").append(svgText);
-
-        svgText = SVG("text");
-                  $(svgText)
-                  .attr('id','bartext')
-                  .attr('x',bbox.x-405)
-                  .attr('y',"6%")
-                  .text("Data Visualizations");
-                  $(".menu").append(svgText);
-                  
-        svgText = SVG("text");
-                  $(svgText)
-                  .attr('id','bartext')
-                  .attr('x',bbox.x-405-162)
-                  .attr('y',"6%")
+                  .attr('x',bbox.x + 240)
+                  .attr('y',"6.9%")
                   .text("About Me");
                   $(".menu").append(svgText);
 
         svgText = SVG("text");
                   $(svgText)
                   .attr('id','bartext')
-                  .attr('x',bbox.x + 108)
-                  .attr('y',"6%")
-                  .text("Publications");
+                  .attr('x',bbox.x + 375)
+                  .attr('y',"6.9%")
+                  .text("Resume");
                   $(".menu").append(svgText);
-        
+                  
         svgText = SVG("text");
                   $(svgText)
                   .attr('id','bartext')
-                  .attr('x',bbox.x + 292 )
-                  .attr('y',"6%")
-                  .text("Resume");
+                  .attr('x',bbox.x + 488)
+                  .attr('y',"6.9%")
+                  .text("Data Visualizations");
                   $(".menu").append(svgText);
 
         svgText = SVG("text");
                   $(svgText)
                   .attr('id','bartext')
-                  .attr('x',bbox.x + 432)
-                  .attr('y',"6%")
+                  .attr('x',bbox.x + 719)
+                  .attr('y',"7%")
+                  .text("Modeling");
+                  $(".menu").append(svgText);
+        
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',bbox.x + 847 )
+                  .attr('y',"6.9%")
+                  .text("Publications");
+                  $(".menu").append(svgText);
+
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',bbox.x + 1005)
+                  .attr('y',"6.9%")
                   .text("Contact Me");
                   $(".menu").append(svgText);
         
