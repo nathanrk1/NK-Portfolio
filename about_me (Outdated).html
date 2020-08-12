@@ -67,45 +67,18 @@ body{
 
   /* menu css end */
 
-
-.select_box {
-  opacity: 1;
-  display: block;
-  transition: 1s ease;
-  backface-visibility: hidden;
-}
-
-.select_box:hover {
-    opacity: 0.5;
-    filter:url(#f1);
-}
-
-#about_me:hover .titletext {
-  visibility: visible;
-  opacity: 1;}
-
-#resume:hover .titletext {
-  visibility: visible;
-  opacity: 1;}
-
-#academic:hover .titletext {
-  visibility: visible;
-  opacity: 1;}
-
-#data_center:hover .titletext {
-  visibility: visible;
-  opacity: 1;}
-
-.titletext{
-    font-size: 35pt;
-    font-weight: bold;
+#desc{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
     fill: white;
 }
 
-#modeling:hover .titletext {
-  transition: 1s ease;
-  visibility: visible;
-  opacity: 1;}
+#closer{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: white;
+    font-weight: bold;
+}
 </style>
     
 </head>
@@ -133,35 +106,17 @@ body{
             </defs> 
            
             <rect id="background" x="0%" y="8%" width="100%" height="100%" fill="url(#Gradient2)"/>
-            <g id = "about_me">
-              <a href="about_me.html">
             <rect x=".2%" y="10.5%" width= "459px" height="683px" fill="black" />
-            <image class = "select_box" href="images\nathan_profile.png"  x=".6%" y="11.3%" />
-              </a>
+            <g id = "about_me_photo">
+            <image class = "select_box" href="Insert Picture Here"  x=".6%" y="11.3%" />
             </g>
-            <g id = "resume">
-              <rect x="32.15%" y="12.2%" width="487px" height="327px" fill="black" />
-            <image class = "select_box" href="images\resume.png" x="31.85%" y="13%" width="33.9%" height="41%" />
-            </g>
-            <g id = "academic">
-              <rect x="32.15%" y="55.7%" width="487px" height="327px" fill="black" />
-            <image class = "select_box" href="images\academic.png"  x="31.85%" y="56.5%" width="33.9%" height="41%"/>"
-            </g>
-            <g id = "data_center">
-              <rect x="65.8%" y="12.2%" width="487px" height="327px" fill="black" />
-            <image class = "select_box" href="images\visualization2.png" x="65.5%" y="13%" width="33.9%" height="41%" />
-            </g>
-            <g id="modeling">
-              <rect x="65.8%" y="55.7%" width="487px" height="327px" fill="black" />
-            <image class = "select_box" href="images\Modeling2.png" x="65.5%" y="56.5%" width="33.9%" height="41%" />
-            </g>
-
+            
             <g class="menu">
                 <rect id = "navbar" x="0" y="0" width="100%" height="10%" fill="url(#Gradient1)"/>
                 <rect id= "navbar_bord" x="0" y="9%" width="100%" height=".5%"/>
                 <a href="index.html">
-                  <image id="logo" href="images\Personal Logo.svg" x="1%" y="-6.5%" width="15%" height="25%"/>
-                 </a>
+                <image id="logo" href="images\Personal Logo.svg" x="1%" y="-6.5%" width="15%" height="25%"/>
+                </a>
                 <!-- about me dropdown -->
                 <a class="abtText" href="about_me.html">
                   
@@ -189,9 +144,36 @@ body{
                 <a class="pubText" href="http://www.google.com/">
                   
                 </a>
+
+                <!-- Contact Me Dropdown -->
+                <a class="conText" href="contact_me.html">
+                  
+                </a>
+            </g>
+            <g id = "desc">
+                <text x="34%" y="35%"> Nathan Kanter is currently a Junior at Purdue University as a double major in Data Visualization,</text> 
+                <text x="33%" y="38%"> and Web Programming and Design. While completing his education, Kanter is completing research </text>
+                <text x="33%" y="41%"> on Systemic Lupus Erythematosus (SLE) under assistant professor Dr. Vetria Byrd. By using data</text>
+                <text x="33%" y="44%"> from Riley Children's Hospital in Indianapolis, Kanter creates data visualizations to allow for</text>
+                <text x="33%" y="47%"> easier analysis.</text> 
+                <text x="34%" y="53%"> The end goal for Kanter is to obtain a job in either the automation, technology, or entertainment </text> 
+                <text x="33%" y="56%"> as a Data Analyst or UX Designer. Kanter also attempts to perform community service whenever</text>
+                <text x="33%" y="59%"> possible. This is due to Kanter's belief that people should help others whenever possible. Aside</text>. 
+                <text x="33%" y="62%"> from community service, other interests of the student include, playing bass guitar, listening</text>
+                <text x="33%" y="65%"> to music, and film. ​</text>
+            </g>
+
+            <g id="closer">
+                <image id="logo" href="images\Personal Logo_Signature.png" x="45%" y="73%" width="20%" height="25%"/>
+                <a class="con_button" href="contact_me.html">
+                    <rect x="65%" y="78%" width="17.6%" height="14%" fill="black"></rect>
+                    <rect x="65.5%" y="79%" width="16.5%" height="12%" fill="rgb(141, 96, 224)"></rect>
+                    <text x="67.25%" y="86%">Contact Me</text>
+                </a>
             </g>
         </svg>
     </div>
+    
 <script>
     
     function SVG(tag) {
@@ -290,50 +272,7 @@ body{
                   $(".conText").append(svgText);
         // menu script end
 
-        svgText = SVG("text");
-                  $(svgText)
-                  .attr('class','titletext')
-                  .attr('opacity',0)
-                  .attr('x',"9%")
-                  .attr('y',"57%")
-                  .text("About Me");
-                  $("#about_me").append(svgText);
-
-        svgText = SVG("text");
-                  $(svgText)
-                  .attr('class','titletext')
-                  .attr('opacity',0)
-                  .attr('x',"629px")
-                  .attr('y',"270px")
-                  .text("Resume");
-                  $("#resume").append(svgText);
-
-        svgText = SVG("text");
-                  $(svgText)
-                  .attr('class','titletext')
-                  .attr('opacity',0)
-                  .attr('x',"590px")
-                  .attr('y',"610px")
-                  .text("Publications");
-                  $("#academic").append(svgText);
-                  
-        svgText = SVG("text");
-                  $(svgText)
-                  .attr('class','titletext')
-                  .attr('opacity',0)
-                  .attr('x',"1016px")
-                  .attr('y',"270px")
-                  .text("Data Visualizations");
-                  $("#data_center").append(svgText);
-
-        svgText = SVG("text");
-                  $(svgText)
-                  .attr('class','titletext')
-                  .attr('opacity',0)
-                  .attr('x',"1106px")
-                  .attr('y',"610px")
-                  .text("Modeling");
-                  $("#modeling").append(svgText);
+      
 
 </script>
 
