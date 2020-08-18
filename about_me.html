@@ -53,6 +53,10 @@ body{
     stroke-width: 7px;
 }
 
+.button_rect{
+    fill:purple;
+}
+
 .abtText:hover .dropdown {
   visibility: visible;
   opacity: 1;}
@@ -80,11 +84,34 @@ body{
     font-weight: bold;
 }
 
-.abt_button{
+.res_but_text{
     font-size: 25pt;
     font-family: monospace;
-    fill: white;
+    fill: rgb(255, 255, 255);
     font-weight: bold;
+    stroke:black;
+    stroke-width: 1px;
+}
+
+.abt_button:hover{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: rgb(240, 235, 235);
+    font-weight: bold;
+    transition: .4s ease;
+}
+
+.abt_button:hover .res_but_text{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: purple;
+    font-weight: bold;
+    transition: .4s ease;
+}
+
+.abt_button:hover .button_rect{
+    fill:rgb(240, 235, 235);
+    transition: .4s ease;
 }
 
 #category{
@@ -151,7 +178,7 @@ body{
                 </a>
 
                 <!-- data visualization dropdown -->
-                <a class="vizText" href="http://www.google.com/">
+                <a class="vizText" href="data_viz_menu.html">
                   
                 </a>
 
@@ -169,7 +196,7 @@ body{
            <g id="id_card">
             <rect x="20%" y="15%" width= "900px" height="500px" fill="black" />
             <rect x="21%" y="17%" width= "868px" height="468px" fill="rgb(240, 235, 235)" />
-            <rect x="21%" y="17%" width= "340px" height="300px" fill="purple" />
+            <rect x="21%" y="17%" width= "340px" height="300px" fill="black" />
             <g id = "desc">
                 <text x="46%" y="26%"> Nathan Kanter is currently a Junior at Purdue University as a </text>
                 <text x="45%" y="29%"> double major in Data Visualization,and Web Programming and </text> 
@@ -197,9 +224,9 @@ body{
             <g id="closer">
                 <text x="19.65%" y="85%"> To learn more about Nathan Kanter check out the Resume Page!!!</text>
                 <a class="abt_button" href="resume.html">
-                    <rect x="42%" y="88%" width="17.6%" height="10%" fill="black"></rect>
-                    <rect x="42.5%" y="89%" width="16.5%" height="8%" fill="rgb(141, 96, 224)"></rect>
-                    <text x="47%" y="94.5%">Resume</text>
+                    <rect x="42%" y="88%" width="17.05%" height="8.5%" fill="black"></rect>
+                    <rect class="button_rect" x="42.25%" y="88.5%" width="16.5%" height="7.5%"></rect>
+                    <text class="res_but_text" x="47%" y="93.5%">Resume</text>
                 </a>
             </g>
         </svg>
