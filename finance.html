@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Nathan Kanter: Data Visualization Portfolio</title>
+<style>
+
+body{
+    margin: 0;
+    background-color: red;
+    font-size: 16px;
+}
+
+#content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height:130rem;
+    width:91.25rem; 
+}
+
+/* menu css start */
+#bartext{
+    font-family: candara;
+    font-weight: 300;
+    font-size: 20pt;
+    fill: white;
+}
+
+#bartext:hover{
+   fill:rgb(141, 96, 224);
+   font-weight:bold ;
+}
+
+#dropText{
+    font-family: candara;
+    font-weight: 300;
+    font-size: 16pt;
+    fill: white;
+}
+
+#dropText:hover{
+   fill:rgb(141, 96, 224);
+   font-weight:bold ;
+}
+
+#navbar{
+    
+      fill: url(#Gradient1); }
+        .stop1 { stop-color: rgba(0, 0, 0, 1); }
+        .stop2 { stop-color: rgba(0, 0, 0, .9); stop-opacity:1;}
+        .stop3 { stop-color: rgba(0, 0, 0, 1); }
+
+#critique1{
+    
+    fill: url(#Gradient4); }
+    
+#critique2{
+
+fill: url(#Gradient4); }
+    
+
+#navbar_bord{
+    stroke: rgba(0, 0, 0, .7);
+    stroke-width: 7px;
+}
+
+  /* menu css end */
+    .titleText{
+    font-size: 30pt;
+    font-family: monospace;
+    fill: white;
+    font-weight: bold;
+}
+
+.button_rect{
+    fill:purple;
+}
+
+.res_but_text{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: rgb(255, 255, 255);
+    font-weight: bold;
+    stroke:black;
+    stroke-width: 1px;
+}
+
+.abt_button:hover{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: rgb(240, 235, 235);
+    font-weight: bold;
+    transition: .4s ease;
+}
+
+.abt_button:hover .res_but_text{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: purple;
+    font-weight: bold;
+    transition: .4s ease;
+}
+
+.abt_button:hover .button_rect{
+    fill:rgb(240, 235, 235);
+    transition: .4s ease;
+}
+
+#category{
+    font-size: 20pt;
+    font-family:monospace;
+    font-weight: bold;
+}
+
+#listing{
+    font-size: 16pt;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#image{
+    transform:scale(.65);
+}
+
+#desc_box{
+    transform: translate(0rem,27rem);
+}
+
+.desc{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    fill: white;
+}
+
+.cText{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    fill: black;
+    font-style: oblique;
+    stroke: black;
+    stroke-width: .5px;
+}
+
+.subText{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: white;
+}
+
+.subTextB{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: white;
+    font-weight:550;
+    stroke: black;
+}
+
+#summary{
+    transform: translate(15.625rem,14rem);
+}
+
+#functionality{
+    transform: translate(15.625rem,19rem);
+}
+</style>
+    
+</head>
+<body>
+
+    <div id="page">
+        <svg id = "content" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+                  <stop class="stop1" offset="0%"/>
+                  <stop class="stop2" offset="50%"/>
+                  <stop class="stop3" offset="100%"/>
+                </linearGradient>
+                <defs>
+                    <radialGradient id="Gradient2"
+                          cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+                      <stop offset="0%" stop-color="rgba(142, 55, 191, .7)"/>
+                      <stop offset="100%" stop-color="rgba(117, 39, 156,1)"/>
+                    </radialGradient>
+
+                    <filter id="f1" x="0" y="0">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                    </filter>
+                </defs>
+            </defs> 
+           
+            <rect id="background" x="0rem" y="3.84rem" width="92.3125rem" height="130rem" fill="url(#Gradient2)"/>
+
+            <g class="menu">
+                <rect id = "navbar" x="0rem" y="0rem" width="92.3125rem" height="4.8rem" fill="url(#Gradient1)"/>
+                <rect id= "navbar_bord" x="0rem" y="4.32rem" width="92.3125rem" height=".24rem"/>
+                <a href="index.html">
+                    <image id="logo" href="images\Personal Logo.svg" x=".923125rem" y="-3.12rem" width="13.846875rem" height="12rem"/>
+                   </a>
+                  <!-- about me dropdown -->
+                  <a class="abtText" href="about_me.html">
+                    
+                  </a>
+  
+                        <a class="abtDrop" href="about_me.html">
+                          
+                        </a>
+                  <!-- resume dropdown -->
+                  <a class="resText" href="resume.html">
+                    
+                  </a>
+  
+                  <!-- data visualization dropdown -->
+                  <a class="vizText" href="data_viz_menu.html">
+                    
+                  </a>
+  
+                  <!-- 3d Modeling Dropdown -->
+                  <a class="modText" href="modeling_menu.html">
+                    
+                  </a>
+  
+                  <!-- Publications Dropdown -->
+                  <a class="pubText" href="publications_menu.html">
+                    
+                  </a>
+              </g>
+              <g id="header">
+            <text class="titleText" x="22.9446875rem" y="8.64rem">UPS:Power BI Financial Dashboards</text>
+            <text class="subText" x="18.709375rem" y="11.64rem">Created in the Summer of 2019: Rising Sophomore</text>
+            <rect x="15.064375rem" y="13.439375rem" width="61.12125rem" height="36.683125rem" fill="black"/>
+            <rect x="15.189375rem" y="13.564375rem" width="60.87125rem" height="36.433125rem" fill="rgb(61, 56, 56)"/>
+            <rect x="15.064375rem" y="54.439375rem" width="61.12125rem" height="36.683125rem" fill="black"/>
+            <rect x="15.189375rem" y="54.564375rem" width="60.87125rem" height="36.433125rem" fill="rgb(61, 56, 56)"/>
+                </g>
+            
+                <g class="desc">
+                    <text x="9.25rem" y="96rem">These presentations display the work I completed during my time at UPS. With the company's financial records at my disposal</text>
+                    <text x="9.25rem" y="98rem">My job was to create a prototype dashboard that could be universally used within the company to make budgeting tasks easier</text> 
+                    <text x="9.25rem" y="100rem">to complete and present. </text> 
+                    </g>
+        
+                    <g id="desc_box" class="desc">
+                    <defs>
+                        <defs>
+                            <linearGradient id="Gradient4" x1="0%" y1="5%" x2="0%" y2="100%">
+                                <stop offset="12.5%" stop-color="rgba(163, 8, 21, .9)"/>
+                                <stop offset="12.5%" stop-color="rgba(219, 208, 208,1)"/>
+                                <!-- <stop offset="50%" stop-color="#6E62BF"/> -->
+                              <stop offset="100%" stop-color="rgba(219, 208, 208,1)"/>
+                              <!-- <stop offset="100%" stop-color="#6E62BF"/> -->
+                            </linearGradient>
+                        </defs>
+                    </defs> 
+        
+                    <rect x="10.25rem" y="78.375rem" width="71.875rem" height="19.25rem" fill="black"/>
+                    <rect id="critique1" x="11rem" y="79rem" width="34.5rem" height="18rem"/>
+                    <rect id="critique2" x="46.25rem" y="79rem" width="35rem" height="18rem"/>
+                    <rect x="11rem" y="81.5rem" width="70.375rem" height=".5rem" fill="black"/>
+                    <rect x="45.375rem" y="79rem" width=".5rem" height="18rem" fill="black"/>
+        
+                    <text class="subTextB" x="23.25rem" y="81rem">Benefits</text>
+                    <text class="subTextB" x="56.25rem" y="81rem">How to Improve</text>
+        
+                    <g class="cText">
+                    <!-- Benefit -->
+                    <text x="13.25rem" y="86rem">• A large amount of information is displayed</text>
+                    <text x="14.15rem" y="88rem">in a simple format</text>
+                    <text x="13.25rem" y="90rem">• Highly Detailed and Organized</text>
+        
+                    <!-- Improve -->
+                    <text x="48rem" y="86rem">• Would put everything into one single dashboard</text>
+                    <text x="48rem" y="88rem">• Would remove many of the colors to give the</text>
+                    <text x="49.15rem" y="90rem">dashboard more consistency.</text>
+                    </g>
+                    </g>
+        
+            <!-- Center line -->
+            <!-- <rect x="45.125rem" y="0rem" width="1rem" height="100%" fill="black"/> -->
+            <!-- Center line end -->
+
+        </svg>
+        <iframe id="summary" src="https://docs.google.com/presentation/d/e/2PACX-1vQ0hJfeV0mJKA59vrZ8QO54ekv9a4tYEFb8PEibbUXlHtVmkGEFURKwELAG_bvccQffJK_xtSa66spK/embed?start=false&loop=false&delayms=3000" 
+        frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+        <iframe id="functionality" src="https://docs.google.com/presentation/d/e/2PACX-1vTkoyxccqjy8Z5-oWk7khNWIg3kXAGjayGyBq2tjHoXO1ZfBeIvfYyt7LBpblsf_A35EEKRyLUhZgq0/embed?start=false&loop=false&delayms=3000" 
+        frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+    </div>
+    
+<script>
+    
+    function SVG(tag) {
+        return document.createElementNS('http://www.w3.org/2000/svg', tag);
+    }
+    function tag(tag) {
+        return document.createElement(tag);
+    }
+    
+  // menu script start
+    var bbox =$("#logo")[0].getBoundingClientRect();
+    
+         svgText = SVG("text");
+                    $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',(bbox.x + 240)/16 + "rem")
+                  .attr('y',"3.312rem")
+                  .text("About Me");
+                  $(".abtText").append(svgText);
+            
+            svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',(bbox.x + 375)/16 + "rem")
+                  .attr('y',"3.312rem")
+                  .text("Resume");
+                  $(".resText").append(svgText);
+                  
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',(bbox.x + 488)/16 + "rem")
+                  .attr('y',"3.312rem")
+                  .text("Data Visualizations");
+                  $(".vizText").append(svgText);
+
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',(bbox.x + 719)/16 + "rem")
+                  .attr('y',"3.36rem")
+                  .text("Modeling");
+                  $(".modText").append(svgText);
+        
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',(bbox.x + 847)/16 + "rem")
+                  .attr('y',"3.312rem")
+                  .text("Publications");
+                  $(".pubText").append(svgText);
+
+        // menu script end
+
+      
+
+</script>
+
+</body>
+</html>

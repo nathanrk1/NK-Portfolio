@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Nathan Kanter: Data Visualization Portfolio</title>
+<style>
+
+body{
+    margin: 0;
+    background-color: red;
+    font-size: 16px;
+}
+
+#content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height:150rem;
+    width:91.25rem;  
+}
+
+/* menu css start */
+#bartext{
+    font-family: candara;
+    font-weight: 300;
+    font-size: 20pt;
+    fill: white;
+}
+
+#bartext:hover{
+   fill:rgb(141, 96, 224);
+   font-weight:bold ;
+}
+
+#dropText{
+    font-family: candara;
+    font-weight: 300;
+    font-size: 16pt;
+    fill: white;
+}
+
+#dropText:hover{
+   fill:rgb(141, 96, 224);
+   font-weight:bold ;
+}
+
+#navbar{
+    
+      fill: url(#Gradient1); }
+        .stop1 { stop-color: rgba(0, 0, 0, 1); }
+        .stop2 { stop-color: rgba(0, 0, 0, .9); stop-opacity:1;}
+        .stop3 { stop-color: rgba(0, 0, 0, 1); }
+
+#critique1{
+    
+    fill: url(#Gradient4); }
+    
+#critique2{
+
+fill: url(#Gradient4); }
+    
+
+#navbar_bord{
+    stroke: rgba(0, 0, 0, .7);
+    stroke-width: 7px;
+}
+
+  /* menu css end */
+    .titleText{
+    font-size: 30pt;
+    font-family: monospace;
+    fill: white;
+    font-weight: bold;
+}
+
+.button_rect{
+    fill:purple;
+}
+
+.res_but_text{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: rgb(255, 255, 255);
+    font-weight: bold;
+    stroke:black;
+    stroke-width: 1px;
+}
+
+.abt_button:hover{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: rgb(240, 235, 235);
+    font-weight: bold;
+    transition: .4s ease;
+}
+
+.abt_button:hover .res_but_text{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: purple;
+    font-weight: bold;
+    transition: .4s ease;
+}
+
+.abt_button:hover .button_rect{
+    fill:rgb(240, 235, 235);
+    transition: .4s ease;
+}
+
+#category{
+    font-size: 20pt;
+    font-family:monospace;
+    font-weight: bold;
+}
+
+#listing{
+    font-size: 16pt;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#image{
+    transform:scale(.65);
+}
+
+#desc_box{
+    transform: translate(0rem,-25rem);
+}
+
+#desc_box2{
+    transform: translate(0rem,-8rem);
+}
+
+#graph2{
+    transform: translate(0rem,-5rem);
+}
+
+.desc{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    fill: white;
+}
+
+.cText{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    fill: black;
+    font-style: oblique;
+    stroke: black;
+    stroke-width: .5px;
+}
+
+.subText{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: white;
+}
+
+.subTextB{
+    font-size: 25pt;
+    font-family: monospace;
+    fill: white;
+    font-weight:550;
+    stroke: black;
+}
+
+#video{
+    transform: translate(19.0625rem,15rem);
+}
+</style>
+    
+</head>
+<body>
+
+    <div id="page">
+        <svg id = "content" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+                  <stop class="stop1" offset="0%"/>
+                  <stop class="stop2" offset="50%"/>
+                  <stop class="stop3" offset="100%"/>
+                </linearGradient>
+                <defs>
+                    <radialGradient id="Gradient2"
+                          cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+                      <stop offset="0%" stop-color="rgba(142, 55, 191, .7)"/>
+                      <stop offset="100%" stop-color="rgba(117, 39, 156,1)"/>
+                    </radialGradient>
+
+                    <filter id="f1" x="0" y="0">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                    </filter>
+                </defs>
+            </defs> 
+           
+            <rect id="background" x="0rem" y="3.84rem" width="92.3125rem" height="150rem" fill="url(#Gradient2)"/>
+
+            <g class="menu">
+                <rect id = "navbar" x="0rem" y="0rem" width="92.3125rem" height="4.8rem" fill="url(#Gradient1)"/>
+                <rect id= "navbar_bord" x="0rem" y="4.32rem" width="92.3125rem" height=".24rem"/>
+                <a href="index.html">
+                    <image id="logo" href="images\Personal Logo.svg" x=".923125rem" y="-3.12rem" width="13.846875rem" height="12rem"/>
+                   </a>
+                  <!-- about me dropdown -->
+                  <a class="abtText" href="about_me.html">
+                    
+                  </a>
+  
+                        <a class="abtDrop" href="about_me.html">
+                          
+                        </a>
+                  <!-- resume dropdown -->
+                  <a class="resText" href="resume.html">
+                    
+                  </a>
+  
+                  <!-- data visualization dropdown -->
+                  <a class="vizText" href="data_viz_menu.html">
+                    
+                  </a>
+  
+                  <!-- 3d Modeling Dropdown -->
+                  <a class="modText" href="modeling_menu.html">
+                    
+                  </a>
+  
+                  <!-- Publications Dropdown -->
+                  <a class="pubText" href="publications_menu.html">
+                    
+                  </a>
+              </g>
+              <g id="header">
+            <text class="titleText" x="32.566875rem" y="8.64rem">3D Rendered Kitchen</text>
+            <text class="subText" x="23.290625rem" y="11.64rem">Created in November 2019: Sophomore Year</text>
+            <rect x="18.501875rem" y="14.439375rem" width="54.24625rem" height="35.49625rem" fill="black"/>
+            <rect x="18.626875rem" y="14.564375rem" width="53.99625rem" height="35.24625rem" fill="rgb(61, 56, 56)"/>
+                </g>
+
+            <g id="desc_box" class="desc">
+            <defs>
+                <defs>
+                    <linearGradient id="Gradient4" x1="0%" y1="5%" x2="0%" y2="100%">
+                        <stop offset="12.5%" stop-color="rgba(163, 8, 21, .9)"/>
+                        <stop offset="12.5%" stop-color="rgba(219, 208, 208,1)"/>
+                        <!-- <stop offset="50%" stop-color="#6E62BF"/> -->
+                      <stop offset="100%" stop-color="rgba(219, 208, 208,1)"/>
+                      <!-- <stop offset="100%" stop-color="#6E62BF"/> -->
+                    </linearGradient>
+                </defs>
+            </defs> 
+
+            <rect x="10.25rem" y="78.375rem" width="71.875rem" height="19.25rem" fill="black"/>
+            <rect id="critique1" x="11rem" y="79rem" width="34.5rem" height="18rem"/>
+            <rect id="critique2" x="46.25rem" y="79rem" width="35rem" height="18rem"/>
+            <rect x="11rem" y="81.5rem" width="70.375rem" height=".5rem" fill="black"/>
+            <rect x="45.375rem" y="79rem" width=".5rem" height="18rem" fill="black"/>
+
+            <text class="subTextB" x="23.25rem" y="81rem">Benefits</text>
+            <text class="subTextB" x="56.25rem" y="81rem">How to Improve</text>
+
+            <g class="cText">
+            <!-- Benefit -->
+            <text x="13.25rem" y="86rem">• Near identical to concept art</text>
+            <text x="13.25rem" y="88rem">• Scene is well lit</text>
+            <text x="13.25rem" y="90rem">• Photo-realistic</text>
+
+            <!-- Improve -->
+            <text x="48rem" y="86rem">• Have more light emit from the overhead light</text>
+            <text x="48rem" y="88rem">• Fix wine glasses clarity </text>
+            <text x="48rem" y="90rem">• Add hand drawn textures</text>
+            </g>
+            </g>
+
+            <g id="graph2">
+            <g id="header">
+                <text class="titleText" x="32.566875rem" y="85rem">3D Rendered Kitchen</text>
+                <text class="subText" x="23.290625rem" y="88rem">Created in November 2019: Sophomore Year</text>
+                <rect x="20.939375rem" y="90.4175rem" width="49.87125rem" height="37.68375rem" fill="black"/>
+                <rect x="21.064375rem" y="90.5125rem" width="49.62125rem" height="37.43375rem" fill="rgb(61, 56, 56)"/>
+                <image id="image" href="images\concept.jpg" x="33rem" y="140rem"/>
+                    </g>
+               
+                <g id="desc_box2" class="desc">
+                    <defs>
+                        <defs>
+                            <linearGradient id="Gradient4" x1="0%" y1="5%" x2="0%" y2="100%">
+                                <stop offset="12.5%" stop-color="rgba(163, 8, 21, .9)"/>
+                                <stop offset="12.5%" stop-color="rgba(219, 208, 208,1)"/>
+                                <!-- <stop offset="50%" stop-color="#6E62BF"/> -->
+                              <stop offset="100%" stop-color="rgba(219, 208, 208,1)"/>
+                              <!-- <stop offset="100%" stop-color="#6E62BF"/> -->
+                            </linearGradient>
+                        </defs>
+                    </defs> 
+        
+                    <rect x="10.25rem" y="139.375rem" width="71.875rem" height="19.25rem" fill="black"/>
+                    <rect id="critique1" x="11rem" y="140rem" width="34.5rem" height="18rem"/>
+                    <rect id="critique2" x="46.25rem" y="140rem" width="35rem" height="18rem"/>
+                    <rect x="11rem" y="142.5rem" width="70.375rem" height=".5rem" fill="black"/>
+                    <rect x="45.375rem" y="140rem" width=".5rem" height="18rem" fill="black"/>
+        
+                    <text class="subTextB" x="23.25rem" y="142rem">Benefits</text>
+                    <text class="subTextB" x="56.25rem" y="142rem">How to Improve</text>
+        
+                    <g class="cText">
+                    <!-- Benefit -->
+                    <text x="13.25rem" y="147rem">• Good color coordination </text>
+                    <text x="13.25rem" y="149rem">• Good line work</text>
+        
+                    <!-- Improve -->
+                    <text x="48rem" y="147rem">• Would blend the objects some more</text>
+                    <text x="48rem" y="149rem">• Add a background outside the window</text>
+                    </g>
+                    </g>
+                </g>
+            <!-- Center line -->
+            <!-- <rect x="45.125rem" y="0rem" width="1rem" height="100%" fill="black"/> -->
+            <!-- Center line end -->
+
+        </svg>
+        <iframe id="video" width="850" height="550" src="https://www.youtube.com/embed/KXl-5x0riUU" 
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    </div>
+    
+<script>
+    
+    function SVG(tag) {
+        return document.createElementNS('http://www.w3.org/2000/svg', tag);
+    }
+    function tag(tag) {
+        return document.createElement(tag);
+    }
+    
+  // menu script start
+    var bbox =$("#logo")[0].getBoundingClientRect();
+    
+         svgText = SVG("text");
+                    $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',(bbox.x + 240)/16 + "rem")
+                  .attr('y',"3.312rem")
+                  .text("About Me");
+                  $(".abtText").append(svgText);
+            
+            svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',(bbox.x + 375)/16 + "rem")
+                  .attr('y',"3.312rem")
+                  .text("Resume");
+                  $(".resText").append(svgText);
+                  
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',(bbox.x + 488)/16 + "rem")
+                  .attr('y',"3.312rem")
+                  .text("Data Visualizations");
+                  $(".vizText").append(svgText);
+
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',(bbox.x + 719)/16 + "rem")
+                  .attr('y',"3.36rem")
+                  .text("Modeling");
+                  $(".modText").append(svgText);
+        
+        svgText = SVG("text");
+                  $(svgText)
+                  .attr('id','bartext')
+                  .attr('x',(bbox.x + 847)/16 + "rem")
+                  .attr('y',"3.312rem")
+                  .text("Publications");
+                  $(".pubText").append(svgText);
+
+        // menu script end
+
+      
+
+</script>
+
+</body>
+</html>
