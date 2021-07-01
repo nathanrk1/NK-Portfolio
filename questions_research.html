@@ -16,11 +16,47 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    height:110rem;
-    width:91.322rem;  
+    height:125rem;
+    width:91.3rem;  
     margin:auto;
 }
 
+#embeded{
+    height:50rem;
+    width:91rem;  
+    margin: auto;
+    padding-left: .25rem;
+}
+
+
+p{
+    padding-left: 11.5rem;
+    padding-right: 10rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    font-weight: 300;
+    color: white;
+    text-indent: 1.5rem;
+}
+
+h1{
+    padding-top: 10rem;
+    padding-right: 10rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25pt;
+    font-weight: 300;
+    font-family: monospace;
+    color: white;
+    text-align: center;
+    padding-left: 8rem;
+}
+
+#pdf{
+    padding-top: 7rem;
+    transform:translate(13.7503125rem,9.6121875rem);
+    border: none;
+    float: center;
+}
 /* menu css start */
 #bartext{
     font-family: candara;
@@ -46,12 +82,14 @@ body{
    font-weight:bold ;
 }
 
+
 #navbar{
-    
+        
       fill: url(#Gradient1); }
         .stop1 { stop-color: rgba(0, 0, 0, 1); }
         .stop2 { stop-color: rgba(0, 0, 0, .9); stop-opacity:1;}
         .stop3 { stop-color: rgba(0, 0, 0, 1); }
+        
 
 #critique1{
     
@@ -158,8 +196,9 @@ fill: url(#Gradient4); }
 }
 
 #bottom{
-    transform: translate(0rem,24.5rem);
+    transform: translate(0rem,26.5rem);
 }
+
 </style>
     
 </head>
@@ -167,6 +206,7 @@ fill: url(#Gradient4); }
 
     <div id="page">
         <svg id = "content" xmlns="http://www.w3.org/2000/svg">
+            <g id="back">
             <defs>
                 <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
                   <stop class="stop1" offset="0%"/>
@@ -186,14 +226,14 @@ fill: url(#Gradient4); }
                 </defs>
             </defs> 
            
-            <rect  x="0rem" y="3.84rem" width="92.3125rem" height="130rem" fill="red"/>
-            <rect id="background" x="0rem" y="3.84rem" width="92.3125rem" height="130rem" fill="url(#Gradient2)"/>
-        
+            <rect  x="0rem" y="3.84rem" width="92.3125rem" height="125rem" fill="red"/>
+            <rect id="background" x="0rem" y="3.84rem" width="92.3125rem" height="125rem" fill="url(#Gradient2)"/>
+            </g>
             <g class="menu">
                 <rect id = "navbar" x="0rem" y="0rem" width="92.3125rem" height="4.8rem" fill="url(#Gradient1)"/>
                 <rect id= "navbar_bord" x="0rem" y="4.32rem" width="92.3125rem" height=".24rem"/>
                 <a href="index.html">
-                    <image id="logo" href="images\Personal Logo.svg" x=".923125rem" y="-3.12rem" width="13.846875rem" height="12rem"/>
+                    <image id="logo" href="images\Personal Logo.svg" x=".923125rem" y="-3.12rem" width="13.846875rem" height="12rem" style="z-index: 1;"/>
                    </a>
                   <!-- about me dropdown -->
                   <a class="abtText" href="about_me.html">
@@ -225,26 +265,42 @@ fill: url(#Gradient4); }
               </g>
 
               <g id="header">
-            <text class="titleText" x="16.0728125rem" y="8.64rem">Uncovering Patterns in Pubescent Lupus Data</text>
-            <text class="subText" x="23.863125rem" y="11.64rem">Created in Spring 2020: Sophomore Year</text>
-            <rect x="12.664375rem" y="12.9875rem" width="65.92125rem" height="76.72125rem" fill="black"/>
-            <rect x="12.7839375rem" y="13.1125rem" width="65.67125rem" height="76.47125rem" fill="rgb(61, 56, 56)"/>
-            <g class="poster">
-            <image id="image" href="images\lupus.png"/>
-            </g>
-                </g>
-                <g id="bottom">
-            <g id="desc">
-            <text x="11rem" y="70rem">This poster is the result of performing Undergraduate Research for Purdue University's Computer Graphics Technology</text>
-            <text x="11rem" y="72rem">Department while partnered with Riley Children's Hospital in Indianapolis. Within this poster is the preliminary </text>
-            <text x="11rem" y="74rem">results of analyzing prebubescent Lupus data to determine if there is a possible connection between adolescents </text>
-            <text x="11rem" y="76rem">going through puberty and the severity of their symptoms. This project recieved the award for Best Abstract in Math </text>
-            <text x="11rem" y="78rem">and Computational Sciences at the Purdue Undergraduate Research Symposium in April of 2020.</text>
-            </g>
-            </g>
+                <text class="titleText" x="15.7728125rem" y="8.64rem">A Method for Transforming a Broad Topic to a </text>
+                <text class="titleText" x="13.4728125rem" y="11.14rem">Focused Topic for Developing Research Questions</text>
+                <text class="subText" x="13.203125rem" y="14.64rem">Created in Spring 2020 - Fall 2020: Sophomore/Junior Year</text>
 
-          
+                <g id="bottom">
+                    <g id="desc">
+                    <text class="subText" x="40.5rem" y="51rem">Abstract</text>
+                    <text x="13rem" y="54rem">In this research-to-practice full paper, the results of an approach for transforming topic ideas into questions for</text>
+                    <text x="11rem" y="56rem">developing research questions are presented. The first step in developing research questions is identifying an</text>
+                    <text x="11rem" y="58rem">interesting topic. Once a topic is identified, the next challenge is to narrow the focus by formulating and asking</text>
+                    <text x="11rem" y="60rem">questions that, when answered, will provide more depth to the topic. For the novice researcher,articulating what </text>
+                    <text x="11rem" y="62rem">needs to be learned about a topic and what the reader should understand about the topic can be challenging.</text>
+                    <text x="11rem" y="64rem">The purpose of this study is to assess students’ perception of a method that is designed to challenge students to ask</text> 
+                    <text x="11rem" y="66rem">critical questions of their research topics to better understand what they know about the topic; what remains to be </text>
+                    <text x="11rem" y="68rem">known and what their target audience should understand about the topic as a result of the research. An activity worksheet </text>
+                    <text x="11rem" y="70rem">was designed to facilitate critical thinking about the process of questioning and posing questions as part of the </text>
+                    <text x="11rem" y="72rem">developing research questions process. Students were asked to complete the worksheet then provide feedback on the usability</text> 
+                    <text x="11rem" y="74rem">of the activity worksheet. This work aims to answer the following research question, “How do students perceive the usability </text>
+                    <text x="11rem" y="76rem">of the activity worksheet method for developing and evaluating questions about topic ideas?” The activity worksheet was </text>
+                    <text x="11rem" y="78rem">completed by a 43 students across two sections of an undergraduate data visualization course in the Department of Computer </text>
+                    <text x="11rem" y="80rem">Graphics Technology at Purdue University. After completing the worksheet students were asked to provide feedback on the </text>
+                    <text x="11rem" y="82rem">usability of the worksheet, using a 5-point Likert scale: “1 - Strongly disagree,” “2 – Disagree,” “3 – Neutral,” </text>
+                    <text x="11rem" y="84rem">“4 – Agree,” and “5 – Strongly Agree.” Students’ overall perception of the worksheet approach was favorable/positive. </text>
+                    <text x="11rem" y="86rem">The implications of this work will help students build skills in questioning and posing questions. This</text>
+                    <text x="11rem" y="88rem">research is significant because it helps students answer critical questions about their topic, and further clarify the </text>
+                    <text x="11rem" y="90rem">significance of a topic beyond their own interests. The contribution of this work is in helping students pose questions </text>
+                    <text x="11rem" y="92rem">and ask questions that will strengthen their critical thinking skills in the practice of engineering and computer science.</text>
+                    </g>
+                    
+            
+                </g>
+                
         </svg>
+        <div id="embeded">
+            <iframe id="pdf" src="FIE.pdf" width="1000" height="900rem"></iframe>
+        </div>
     </div>
     
 <script>
