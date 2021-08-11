@@ -1143,3 +1143,10 @@ a:hover, a:active {
 .theme-purple .theme-list li::before {
     border-color: #6f42c1;
 }
+
+
+.custom_footer{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

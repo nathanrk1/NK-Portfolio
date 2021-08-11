@@ -2,7 +2,8 @@
     display: block;
     margin: -5px 0 16px 0;
     max-width: 150px;
-    border-bottom: 2px dashed #9FA2AB;
+    border-bottom: 2px solid #9FA2AB;
+ 
 }
 
 .topbar-nav {
@@ -34,7 +35,7 @@
 }
 
 .topbar-nav .toggle-menu:hover {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .minibar {
@@ -405,8 +406,7 @@
 
 /* Portfolio */
 .page-portfolio {
-    background-color: #171925;
-    color: #9FA2AB;
+    
 }
 
 /* Services */
@@ -526,7 +526,7 @@
     position: relative;
     display: block;
     margin: 0;padding: 0;
-    list-style: none;
+    list-style: none; 
 }
 
 .sharer .sharer-link {
@@ -570,8 +570,7 @@
 .vg-footer {
     position: relative;
     display: block;
-    margin: 0;
-    padding: 50px 0;
+    padding: 50px;
     background-color: #171925;
     color: #9FA2AB;
 }
@@ -583,7 +582,7 @@
 .vg-footer .list-unstyled a,
 .vg-footer .list-unstyled li {
     margin-bottom: 6px;
-    font-size: 21px;
+    font-size: 18px;
     color: #fff;
 }
 
