@@ -572,6 +572,16 @@ a:hover, a:active {
 /* 
  *  9. Input
  */
+ #pdf{
+    border: none;
+    float: center;
+}
+
+.scrollbar_hide{
+    overflow-y:scroll;
+}
+
+
 .form-control {
     height: unset;
     padding-top: 10px;
@@ -1145,8 +1155,3 @@ a:hover, a:active {
 }
 
 
-.custom_footer{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
